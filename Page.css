@@ -3,7 +3,17 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: #f7f7f8;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* Style the header */
@@ -15,16 +25,67 @@ header {
   color: white;
 }
 
+/* Ensure header title centers and removes default margins */
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.site-title {
+  color: #60a5fa; 
+  font-size: 40px;
+}
+
+.site-tagline {
+  margin-top: 4px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
 /* Nav styling */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.nav li { list-style: none; }
 
 .nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .nav a:hover {
   color: rgba(251, 179, 25, 0.9);
+}
+
+/* Hero */
+.hero {
+  padding: 32px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+}
+
+.hero-image {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.hero-text h2 {
+  margin: 0 0 8px 0;
 }
 
 /* Style the footer */
@@ -35,10 +96,93 @@ footer {
   color: white;
 }
 
+/* Footer contact links */
+footer .contact-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px 0;
+}
+
+footer .contact-list li span {
+  opacity: 0.9;
+  margin-right: 6px;
+}
+
+footer .contact-link {
+  color: #cfe3ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 24px 0;
+}
+
+.section h3 {
+  margin: 0 0 12px 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  background: transparent; /* remove box fill */
+  border: none;            /* remove box outline */
+  border-radius: 0;        /* no pill shape */
+  padding: 0;              /* no inner spacing */
+  font-size: 14px;
+  color: #0b3b6f;          /* keep readable text color */
+}
+
+.skills-list li:hover {
+  text-decoration: underline; /* subtle feedback without a box */
+}
+
+.button {
+  display: inline-block;
+  background: #60a5fa;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  filter: brightness(0.98);
+}
+
+/* Center the main image */
+.centered-image {
+  display: block;
+  margin: 20px auto;
+}
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   nav, article {
     width: 100%;
     height: auto;
   }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-title { font-size: 32px; }
+  .nav { gap: 12px; }
 }

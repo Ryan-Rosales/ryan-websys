@@ -3,49 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Website</title>
+    <title>Ryan Rosales  Portfolio</title>
      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="page.css">
 </head>
 <body>
  
-     <header id="home">
-      <h1 style="color: rgb(251, 179, 25, 0.9); font-size: 40px;">
-        Hello World Website
-      </h1>
-      <nav>
-        <ul class="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </ul>
-      </nav>
+    <header id="home">
+      <div class="container">
+        <h1 class="site-title">My Portfolio</h1>
+        <p class="site-tagline">BSIT Student • Web development enthusiast</p>
+        <nav aria-label="Primary navigation">
+          <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <img src="Messenger_creation_381310461042177.jpeg" alt="Messenger picture" width="150" height="200">
-    <section><p>Hi I'm Ryan S. Rosales<p>
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <img src="Messenger_creation_381310461042177.jpeg" alt="Portrait of Ryan Rosales" width="160" height="210" class="hero-image centered-image">
+          <div class="hero-text">
+            <h2>Hi, I'm Ryan S. Rosales</h2>
+            <p>I'm a 20-year-old BS in Information Technology student at Father Saturnino Urios University. I enjoy building web applications and learning by shipping small projects.</p>
+          </div>
+        </div>
+      </section>
 
-    <p>and aslo I'm 20 Years Old
-    I Study at Father Saturnino Urios University With the Course of Bachelor Of Science and Information Technology<p>
+      <section id="about" class="section">
+        <div class="container">
+          <h3>About</h3>
+          <p>My goal is to graduate and build a career in software development. I'm focused on improving my fundamentals and turning ideas into working apps.</p>
+        </div>
+      </section>
 
+      <section id="skills" class="section">
+        <div class="container">
+          <h3>Skills</h3>
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-    <h2 id="about" style="color:rgb(8, 8, 8);">Description</h2>
-    <p>My goal is to graduate and to become a successful someday</p>
-
-    <h2 style="color:rgb(8, 8, 8);">Working Visit</h2>
-    <ul>
-        <li>Laravel</li>
-        <li>React</li>
-        <li>Javascript</li>
-    </ul>
-
-    <section>
-        
     <footer id="contact">
-        <h2 style="color: rgba(251, 179, 25, 0.9); font-size: 40px;"> Vsit my Git Hub</h2>
-    <a href="http://github.com/Ryan-Rosales">This is my link of Github</a>
-  <img src="github.png" alt="github photo" width="60" height="60">
-   </footer>
+      <div class="container">
+        <h3>Contact</h3>
+        <p>See more of my work on GitHub.</p>
+        <ul class="contact-list">
+          <li><span>Email:</span> <a class="contact-link" href="mailto:ryan.rosales@urios.edu.ph">ryan.rosales@urios.edu.ph</a></li>
+          <li><span>Phone:</span> <a class="contact-link" href="tel:+639318863168">0931 886 3168</a></li>
+        </ul>
+        <p>
+          <a class="button" href="https://github.com/Ryan-Rosales" target="_blank" rel="noopener">Visit my GitHub</a>
+        </p>
+        <img src="github.png" alt="GitHub logo" width="60" height="60">
+      </div>
+    </footer>
     
 </body>
 </html>
