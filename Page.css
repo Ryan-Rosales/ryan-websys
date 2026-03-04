@@ -146,11 +146,12 @@ footer .contact-link:hover {
   border-radius: 0;        /* no pill shape */
   padding: 0;              /* no inner spacing */
   font-size: 14px;
-  color: #0b3b6f;          /* keep readable text color */
+  color: #000 !important;  /* keep readable text color */
+  text-decoration: none !important;
 }
 
 .skills-list li:hover {
-  text-decoration: underline; /* subtle feedback without a box */
+  text-decoration: none !important; /* subtle feedback without a box */
 }
 
 .button {
@@ -185,4 +186,8 @@ footer .contact-link:hover {
   }
   .site-title { font-size: 32px; }
   .nav { gap: 12px; }
+}
+
+#skills-section, #skills-section h3, #skills-section ul, #skills-section li, #skills-section strong {
+  color: #000 !important;
 }

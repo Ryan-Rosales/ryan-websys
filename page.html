@@ -15,20 +15,20 @@
     <header id="home">
       <div class="container">
         <h1 class="site-title">My Portfolio</h1>
-        <p class="site-tagline">BSIT Student • Web development enthusiast</p>
+        <p class="site-tagline">BSIT Student • Web development Practices</p>
         <nav aria-label="Primary navigation">
           <ul class="nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+            <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+            <li><a href="#skills" onclick="showSection('skills'); return false;">Skills</a></li>
+            <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section id="home-section" class="hero">
         <div class="container hero-content">
           <img src="Messenger_creation_381310461042177.jpeg" alt="Portrait of Ryan Rosales" width="160" height="210" class="hero-image centered-image">
           <div class="hero-text">
@@ -37,27 +37,31 @@
           </div>
         </div>
       </section>
-
-      <section id="about" class="section">
+      <section id="about-section" class="section" style="display:none;">
         <div class="container">
           <h3>About</h3>
           <p>My goal is to graduate and build a career in software development. I'm focused on improving my fundamentals and turning ideas into working apps.</p>
         </div>
       </section>
-
-      <section id="skills" class="section">
+      <section id="skills-section" class="section" style="display:none;">
         <div class="container">
           <h3>Skills</h3>
           <ul class="skills-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+            <li><strong>HTML (HyperText Markup Language)</strong><br>
+              As a BSIT student, I am continuously learning how to create structured and semantic web pages using HTML5. I am developing my ability to organize content properly using appropriate tags and build responsive layouts for different screen sizes. I am also learning the importance of clean structure, accessibility, and basic SEO principles in web development.
+            </li>
+            <li><strong>CSS (Cascading Style Sheets)</strong><br>
+              I am currently improving my skills in designing responsive and visually appealing web interfaces using CSS3. I am learning how to use Flexbox, Grid, media queries, and simple animations to enhance layout and user experience. Through academic and personal projects, I continue to practice creating clean and user-friendly designs.
+            </li>
+            <li><strong>JavaScript</strong><br>
+              I am actively learning JavaScript to add interactivity and functionality to web applications. I am gaining experience in DOM manipulation, event handling, and basic form validation. I continue to strengthen my understanding of programming logic by applying JavaScript in school activities and personal projects.
+            </li>
           </ul>
         </div>
       </section>
     </main>
 
-    <footer id="contact">
+    <footer id="contact-section" style="display:none;">
       <div class="container">
         <h3>Contact</h3>
         <p>See more of my work on GitHub.</p>
@@ -74,3 +78,21 @@
     
 </body>
 </html>
+
+<script>
+  function showSection(section) {
+    document.getElementById('home-section').style.display = 'none';
+    document.getElementById('about-section').style.display = 'none';
+    document.getElementById('skills-section').style.display = 'none';
+    document.getElementById('contact-section').style.display = 'none';
+    if (section === 'home') {
+      document.getElementById('home-section').style.display = '';
+    } else if (section === 'about') {
+      document.getElementById('about-section').style.display = '';
+    } else if (section === 'skills') {
+      document.getElementById('skills-section').style.display = '';
+    } else if (section === 'contact') {
+      document.getElementById('contact-section').style.display = '';
+    }
+  }
+</script>
